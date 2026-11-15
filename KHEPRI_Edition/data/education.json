@@ -1,0 +1,945 @@
+{
+	"cml": [
+		{
+			"blurb": "A scientific question defines the mission objective.",
+			"key": "idea",
+			"level": 1.0,
+			"name": "THE IDEA",
+			"question": "What do we want to discover?"
+		},
+		{
+			"blurb": "Check spacecraft systems, instruments, resources and risks.",
+			"key": "feasibility",
+			"level": 2.0,
+			"name": "FEASIBILITY",
+			"question": "Can we actually do it?"
+		},
+		{
+			"blurb": "Compare equipment, mass, power, fuel, science and risk.",
+			"key": "trade",
+			"level": 3.0,
+			"name": "TRADE STUDIES",
+			"question": "Which design is better?"
+		},
+		{
+			"blurb": "Review the spacecraft configuration and mission plan before launch.",
+			"key": "point",
+			"level": 4.0,
+			"name": "POINT DESIGN",
+			"question": "Is our design developed enough?"
+		}
+	],
+	"instruments": {
+		"camera": {
+			"glyph": "CAM",
+			"host_system": "sensors",
+			"measures": "Surface features and geology",
+			"name": "Camera",
+			"unit": "pixels / images"
+		},
+		"magnet": {
+			"glyph": "MAG",
+			"host_system": "sensors",
+			"measures": "Magnetic field strength",
+			"name": "Magnetometer",
+			"unit": "microtesla (uT)"
+		},
+		"pressure": {
+			"glyph": "BAR",
+			"host_system": "sensors",
+			"measures": "Atmospheric pressure",
+			"name": "Pressure sensor",
+			"unit": "pascal (Pa)"
+		},
+		"radiation": {
+			"glyph": "RAD",
+			"host_system": "shields",
+			"measures": "Ionising radiation dose",
+			"name": "Radiation detector",
+			"unit": "millisievert per day (mSv/day)"
+		},
+		"spectro": {
+			"glyph": "SPEC",
+			"host_system": "sensors",
+			"measures": "What materials and gases are made of",
+			"name": "Spectrometer",
+			"unit": "wavelength / composition"
+		},
+		"thermal": {
+			"glyph": "IR",
+			"host_system": "sensors",
+			"measures": "Surface temperature",
+			"name": "Thermal sensor",
+			"unit": "degrees Celsius (C)"
+		}
+	},
+	"library": [
+		{
+			"cards": [
+				{
+					"body": "Scientists first decide what they want to discover. That question shapes the spacecraft, the instruments and the route.",
+					"example": "To study the Moon, a mission might ask: how hot and cold does the surface get?",
+					"id": "mission_objective",
+					"kind": "real",
+					"related": "Mission selection screen",
+					"source": "NASA - Design and Develop Science Missions",
+					"source_date": "2025",
+					"source_url": "https://www.nasa.gov/wp-content/uploads/2025/04/250323-design-and-develop-science-mission.pdf",
+					"title": "Every mission starts with a question",
+					"uncertainty": "A mission can only answer the questions its instruments were designed for."
+				},
+				{
+					"body": "Ideas grow from a rough concept to a reviewed design. JPL calls these steps Concept Maturity Levels (CML): Idea, Feasibility, Trade Studies and Point Design.",
+					"example": "You start with an objective, check if it is possible, compare options, then freeze a design.",
+					"id": "cml_progression",
+					"kind": "simplified",
+					"related": "Launch checklist and design review",
+					"source": "JPL - Concept Maturity Levels",
+					"source_date": "JPL dataverse",
+					"source_url": "https://dataverse.jpl.nasa.gov/dataset.xhtml?persistentId=hdl:2014/44299",
+					"title": "From idea to design review",
+					"uncertainty": "The four simplified stages stand in for a much longer real process with many reviews."
+				},
+				{
+					"body": "A goal becomes measurable requirements: how much data, which instruments, how much power and fuel.",
+					"example": "Examining the Moon's temperature needs a thermal sensor and enough power to run it.",
+					"id": "requirements",
+					"kind": "simplified",
+					"related": "Instrument loadout",
+					"source": "NASA CubeSat 101",
+					"source_date": "2017",
+					"source_url": "https://www3.nasa.gov/sites/default/files/atoms/files/nasa_csli_cubesat_101_508.pdf",
+					"title": "Objectives become requirements",
+					"uncertainty": "Real requirements are far more detailed; this is a simplified version."
+				}
+			],
+			"category": "Mission design",
+			"icon": "edu_insignia"
+		},
+		{
+			"cards": [
+				{
+					"body": "Every instrument adds mass and uses power. Engineers balance what a mission can carry against what it can do.",
+					"example": "Adding a spectrometer means carrying more mass and drawing more electricity.",
+					"id": "mass_power",
+					"kind": "simplified",
+					"related": "Power management",
+					"source": "NASA CubeSat 101",
+					"source_date": "2017",
+					"source_url": "https://www3.nasa.gov/sites/default/files/atoms/files/nasa_csli_cubesat_101_508.pdf",
+					"title": "Mass and power trade-offs",
+					"uncertainty": "The exact numbers depend on the spacecraft; the principle is what matters."
+				},
+				{
+					"body": "Spare parts and backup systems help a spacecraft survive a failure, but they also add mass and complexity.",
+					"example": "The ISS keeps orbital replacement units that astronauts can swap in.",
+					"id": "redundancy",
+					"kind": "real",
+					"related": "Repair Bay",
+					"source": "ISS program",
+					"source_date": "",
+					"source_url": "",
+					"title": "Reliability and backups",
+					"uncertainty": "Backups add cost and mass; engineers must balance both sides."
+				},
+				{
+					"body": "Spacecraft must survive both extreme cold and extreme heat. Insulation, heaters and radiators keep equipment in a safe range.",
+					"example": "A lander on Mars needs heaters and insulation for very cold nights.",
+					"id": "thermal",
+					"kind": "simplified",
+					"related": "Shield Generator",
+					"source": "NASA - Design and Develop Science Missions",
+					"source_date": "2025",
+					"source_url": "https://www.nasa.gov/wp-content/uploads/2025/04/250323-design-and-develop-science-mission.pdf",
+					"title": "Thermal protection",
+					"uncertainty": "Exact temperatures vary by orbit and season."
+				}
+			],
+			"category": "Spacecraft engineering",
+			"icon": "edu_space"
+		},
+		{
+			"cards": [
+				{
+					"body": "The Martian atmosphere is mostly carbon dioxide and much thinner than Earth's, so it is very cold at the surface.",
+					"example": "Surface pressure on Mars is a tiny fraction of Earth's sea-level pressure.",
+					"id": "mars_atmosphere",
+					"kind": "real",
+					"related": "Scan results",
+					"source": "NASA Mars fact sheet",
+					"source_date": "",
+					"source_url": "",
+					"title": "Mars has a thin atmosphere",
+					"uncertainty": "Values change with location and season on Mars."
+				},
+				{
+					"body": "With no air to hold heat, the lunar surface gets very hot in sunlight and very cold in shadow.",
+					"example": "Apollo astronauts needed suits to cope with both extremes.",
+					"id": "moon_no_air",
+					"kind": "real",
+					"related": "Scan results",
+					"source": "NASA Moon fact sheet",
+					"source_date": "",
+					"source_url": "",
+					"title": "The Moon has no atmosphere",
+					"uncertainty": "Small amounts of gas exist near the surface, but for practical purposes there is none."
+				},
+				{
+					"body": "Earth's magnetic field deflects many charged particles from the Sun. The Moon and Mars have no strong global field.",
+					"example": "A magnetometer measures field strength in microtesla (uT).",
+					"id": "magnetic_fields",
+					"kind": "simplified",
+					"related": "Science Laboratory",
+					"source": "NASA",
+					"source_date": "",
+					"source_url": "",
+					"title": "Magnetic fields protect planets",
+					"uncertainty": "Field strength varies from place to place around a planet."
+				}
+			],
+			"category": "Planetary science",
+			"icon": "edu_user"
+		},
+		{
+			"cards": [
+				{
+					"body": "A spacecraft follows a curving path set by gravity and its speed. Engineers plan this path carefully before launch.",
+					"example": "Getting to Mars needs the right launch window and speed.",
+					"id": "trajectory",
+					"kind": "simplified",
+					"related": "Sector map",
+					"source": "NASA - General Mission Analysis Tool",
+					"source_date": "",
+					"source_url": "",
+					"title": "Trajectories, not straight lines",
+					"uncertainty": "Real trajectories are computed with detailed gravity models; the map is simplified."
+				},
+				{
+					"body": "To change course or slow down, a spacecraft burns propellant. Each change costs fuel, so fuel is planned like a budget.",
+					"example": "A course correction uses a small, planned burn of propellant.",
+					"id": "delta_v",
+					"kind": "simplified",
+					"related": "Engine Room / fuel",
+					"source": "NASA CubeSat 101",
+					"source_date": "2017",
+					"source_url": "https://www3.nasa.gov/sites/default/files/atoms/files/nasa_csli_cubesat_101_508.pdf",
+					"title": "Changing speed costs propellant",
+					"uncertainty": "Real missions budget every burn carefully; the game abstracts this into fuel."
+				}
+			],
+			"category": "Navigation and orbital mechanics",
+			"icon": "edu_space"
+		},
+		{
+			"cards": [
+				{
+					"body": "Cameras capture images of surfaces, clouds and features. They are often the first instrument to reveal what a world looks like.",
+					"example": "Rovers photograph rocks and landscapes.",
+					"id": "cameras",
+					"kind": "real",
+					"related": "Scan results",
+					"source": "NASA",
+					"source_date": "",
+					"source_url": "",
+					"title": "Cameras",
+					"uncertainty": "Image quality depends on distance, light and the camera itself."
+				},
+				{
+					"body": "Thermal sensors measure temperature by detecting heat (infrared light).",
+					"example": "They can show how hot a surface gets in sunlight.",
+					"id": "thermal_sensor",
+					"kind": "real",
+					"related": "Scan results",
+					"source": "NASA",
+					"source_date": "",
+					"source_url": "",
+					"title": "Thermal sensors",
+					"uncertainty": "Readings mix surface and near-surface air temperatures."
+				},
+				{
+					"body": "A spectrometer splits light into colours to find out what a material or atmosphere is made of.",
+					"example": "Spectrometers identified water ice on other worlds.",
+					"id": "spectrometer",
+					"kind": "real",
+					"related": "Scan results",
+					"source": "NASA",
+					"source_date": "",
+					"source_url": "",
+					"title": "Spectrometers",
+					"uncertainty": "Results need careful calibration to interpret correctly."
+				},
+				{
+					"body": "A magnetometer measures magnetic field strength, revealing whether a world is protected from charged particles.",
+					"example": "Measured in microtesla (uT).",
+					"id": "magnetometer",
+					"kind": "real",
+					"related": "Scan results",
+					"source": "NASA",
+					"source_date": "",
+					"source_url": "",
+					"title": "Magnetometers",
+					"uncertainty": "The spacecraft's own electronics can interfere, so calibration matters."
+				}
+			],
+			"category": "Scientific instruments",
+			"icon": "edu_user"
+		},
+		{
+			"cards": [
+				{
+					"body": "Large dish antennas on Earth send commands to a spacecraft and receive its data. NASA's Deep Space Network uses stations around the world.",
+					"example": "A station can listen to a spacecraft even when it is very far away.",
+					"id": "ground_stations",
+					"kind": "real",
+					"related": "Communications Room",
+					"source": "NASA Deep Space Network",
+					"source_date": "",
+					"source_url": "",
+					"title": "Ground stations",
+					"uncertainty": "Coverage depends on which stations can see the spacecraft at that moment."
+				},
+				{
+					"body": "Radio signals travel at the speed of light, but distances in space are huge, so there is always a delay.",
+					"example": "A signal to Mars can take several minutes to arrive.",
+					"id": "signal_delay",
+					"kind": "simplified",
+					"related": "Radio calls",
+					"source": "NASA",
+					"source_date": "",
+					"source_url": "",
+					"title": "Signal delay",
+					"uncertainty": "Delay grows with distance; the exact time changes as planets move."
+				},
+				{
+					"body": "Telemetry is the stream of measurements a spacecraft sends about its own health: temperature, power, battery and more.",
+					"example": "Engineers watch telemetry to spot a problem early.",
+					"id": "telemetry",
+					"kind": "real",
+					"related": "Mission Control dashboard",
+					"source": "NASA",
+					"source_date": "",
+					"source_url": "",
+					"title": "Telemetry",
+					"uncertainty": "Telemetry can only report what sensors measure, so some faults stay hidden."
+				}
+			],
+			"category": "Communications",
+			"icon": "edu_ground"
+		},
+		{
+			"cards": [
+				{
+					"body": "Before launch, engineers run checklists to confirm every system is ready. A green checklist means fewer surprises.",
+					"example": "Fuel, power and life support are checked together.",
+					"id": "readiness",
+					"kind": "simplified",
+					"related": "Launch checklist",
+					"source": "NASA - Design and Develop Science Missions",
+					"source_date": "2025",
+					"source_url": "https://www.nasa.gov/wp-content/uploads/2025/04/250323-design-and-develop-science-mission.pdf",
+					"title": "Readiness before launch",
+					"uncertainty": "Real checklists are far longer; the game shows the idea, not the paperwork."
+				},
+				{
+					"body": "When the signal delay is long or the link is lost, a spacecraft must make some decisions on its own.",
+					"example": "A spacecraft can point its antenna or safe itself without waiting for Earth.",
+					"id": "autonomy",
+					"kind": "simplified",
+					"related": "Communications Room",
+					"source": "NASA",
+					"source_date": "",
+					"source_url": "",
+					"title": "Operating on its own",
+					"uncertainty": "Autonomy is limited on purpose so engineers stay in control of important decisions."
+				},
+				{
+					"body": "Radiation, extreme temperatures and tiny high-speed dust grains (micrometeoroids) can all damage a spacecraft.",
+					"example": "Whipple shielding breaks up tiny grains before they reach the hull.",
+					"id": "hazards",
+					"kind": "real",
+					"related": "Shield Generator",
+					"source": "NASA",
+					"source_date": "",
+					"source_url": "",
+					"title": "Space is a hazardous place",
+					"uncertainty": "Risk can be reduced but never removed completely."
+				}
+			],
+			"category": "Mission operations",
+			"icon": "edu_launch"
+		},
+		{
+			"cards": [
+				{
+					"body": "A measurement is just a number. Scientists compare many measurements and models before drawing a conclusion.",
+					"example": "One temperature reading does not describe a whole planet.",
+					"id": "data_vs_knowledge",
+					"kind": "real",
+					"related": "Science report",
+					"source": "NASA - Design and Develop Science Missions",
+					"source_date": "2025",
+					"source_url": "https://www.nasa.gov/wp-content/uploads/2025/04/250323-design-and-develop-science-mission.pdf",
+					"title": "Data is not knowledge",
+					"uncertainty": "Conclusions can change when new data arrives; that is how science works."
+				},
+				{
+					"body": "Every instrument has limits. Scientists report how accurate a measurement is and how much it can vary.",
+					"example": "A sensor reading can be 'good' or 'fair' quality.",
+					"id": "uncertainty",
+					"kind": "real",
+					"related": "Scan results",
+					"source": "NASA",
+					"source_date": "",
+					"source_url": "",
+					"title": "Uncertainty and quality",
+					"uncertainty": "Uncertainty is normal and expected, not a mistake."
+				},
+				{
+					"body": "Good science says what the evidence supports and what cannot yet be concluded. Every answer leads to a new question.",
+					"example": "A mission finding often suggests the next mission's objective.",
+					"id": "evidence",
+					"kind": "real",
+					"related": "Science report",
+					"source": "NASA",
+					"source_date": "",
+					"source_url": "",
+					"title": "Evidence and open questions",
+					"uncertainty": "A finding is only as strong as the data behind it."
+				}
+			],
+			"category": "Data analysis",
+			"icon": "edu_user"
+		}
+	],
+	"meta": {
+		"note": "Bundled offline educational content for Moon Run. No internet connection is required. Measurement values are labelled real / simplified / fictional. Simplified means rounded, representative, or scaled for gameplay.",
+		"version": "1.0"
+	},
+	"missions": {
+		"earth_mars": {
+			"destination": "Mars (direct)",
+			"finding": "Away from Earth's protection, radiation levels are higher and there is no magnetic field to deflect solar particles.",
+			"instruments": [
+				"camera",
+				"thermal",
+				"pressure",
+				"spectro",
+				"magnet",
+				"radiation"
+			],
+			"limitations": "A single journey samples only part of the path; solar activity also changes over time.",
+			"next_question": "How does radiation along the route change with the Sun's activity cycle?",
+			"objective": "Fly the direct route to Mars and survey the environment along the way.",
+			"question": "What conditions does a spacecraft face on a long interplanetary journey?"
+		},
+		"earth_moon": {
+			"destination": "Luna (the Moon)",
+			"finding": "The Moon has no atmosphere and no global magnetic field, so its surface swings from very hot days to very cold nights.",
+			"instruments": [
+				"camera",
+				"thermal",
+				"pressure",
+				"magnet"
+			],
+			"limitations": "A few measurements cannot map the whole surface or show how conditions change with the seasons.",
+			"next_question": "How do temperatures change near the lunar poles, where the Sun barely rises?",
+			"objective": "Deliver the first cargo to the lunar outpost and study the Moon's surface environment.",
+			"question": "How does the Moon's lack of atmosphere affect its surface temperature?"
+		},
+		"moon_mars": {
+			"destination": "Mars",
+			"finding": "Mars has a very thin carbon-dioxide atmosphere and is very cold, yet it can still raise planet-wide dust storms.",
+			"instruments": [
+				"camera",
+				"thermal",
+				"pressure",
+				"spectro",
+				"magnet",
+				"radiation"
+			],
+			"limitations": "Surface measurements from one place cannot describe the whole planet or its weather over a year.",
+			"next_question": "How do atmospheric pressure and temperature change over a full Martian year?",
+			"objective": "Refuel at the outpost and push on to Mars to compare a thin atmosphere with the airless Moon.",
+			"question": "How thin is the Martian atmosphere, and why can dust storms still form?"
+		},
+		"moon_round": {
+			"destination": "Luna and back",
+			"finding": "Samples and measurements can be collected and returned, but a two-way trip costs far more fuel and supplies.",
+			"instruments": [
+				"camera",
+				"thermal",
+				"pressure",
+				"magnet"
+			],
+			"limitations": "Returned samples are powerful, but they are few compared with what a survey mission can gather.",
+			"next_question": "Which sites should a return mission sample to answer the biggest questions?",
+			"objective": "Touch down, collect samples, then bring the crew and data safely home.",
+			"question": "Can a two-way mission collect useful science without running out of resources?"
+		}
+	},
+	"rooms": {
+		"bio": {
+			"fact": "Living organisms are studied in orbit to learn how biology behaves in space.",
+			"failure": "Food runs short and the crew loses a way to produce fresh nutrients during the mission.",
+			"real": "NASA's BioNutrients project grows nutrient-producing yeast on demand in space.",
+			"reflection": "Which food would be hardest to grow in space, and why?",
+			"source": "NASA - Design and Develop Science Missions",
+			"source_date": "2025",
+			"source_url": "https://www.nasa.gov/wp-content/uploads/2025/04/250323-design-and-develop-science-mission.pdf",
+			"subject": "Biological research",
+			"title": "BioNutrients Bay",
+			"what": "Grows yeast and other organisms to produce nutrients for the crew.",
+			"why": "Long missions cannot carry all their food, so being able to grow nutrients on board matters."
+		},
+		"comms": {
+			"fact": "Radio signals travel at the speed of light, so talking to a distant spacecraft is never instant.",
+			"failure": "Data cannot be transmitted home, and the spacecraft must operate autonomously.",
+			"real": "NASA's Deep Space Network uses large dish antennas around the world to talk to distant spacecraft.",
+			"reflection": "What should a spacecraft do if it cannot reach Earth for an hour?",
+			"source": "NASA - Design and Develop Science Missions",
+			"source_date": "2025",
+			"source_url": "https://www.nasa.gov/wp-content/uploads/2025/04/250323-design-and-develop-science-mission.pdf",
+			"subject": "Ground stations and radio communication",
+			"title": "Communications Room",
+			"what": "Sends science data and telemetry to Earth and receives commands from mission control.",
+			"why": "Without a radio link, mission control cannot track the spacecraft and scientists never receive the data."
+		},
+		"engines": {
+			"fact": "Rockets work best in space because there is no air drag to slow them down.",
+			"failure": "The spacecraft cannot change course or reach its target; it drifts along its current path.",
+			"real": "The Space Shuttle Main Engine and the Saturn V F-1 engines are examples of real rocket propulsion.",
+			"reflection": "If a spacecraft has no fuel left, can it still change direction? Why not?",
+			"source": "NASA CubeSat 101",
+			"source_date": "2017",
+			"source_url": "https://www3.nasa.gov/sites/default/files/atoms/files/nasa_csli_cubesat_101_508.pdf",
+			"subject": "Propulsion and thrust",
+			"title": "Engine Room",
+			"what": "Turns propellant into thrust to change the spacecraft's velocity and direction.",
+			"why": "In space there is no road to push against, so a spacecraft must carry its own propellant to change speed."
+		},
+		"medbay": {
+			"fact": "Spaceflight health is measured, recorded and studied, just like any other science data.",
+			"failure": "Crew health and morale drop, reducing what the crew can do on board.",
+			"real": "ISS crews exercise about two hours a day and follow a strict medical monitoring plan.",
+			"reflection": "Why do astronauts exercise every day in space?",
+			"source": "Canadian Space Agency - Digital Games and Activities",
+			"source_date": "CSA",
+			"source_url": "https://www.asc-csa.gc.ca/eng/youth-educators/digital-games-and-activities.asp",
+			"subject": "Human spaceflight",
+			"title": "Medical Bay",
+			"what": "Keeps the crew healthy and treats injuries and illness during the mission.",
+			"why": "Weightlessness weakens bones and muscles, and a sick or injured crew member can endanger the mission."
+		},
+		"oxygen": {
+			"fact": "An astronaut uses roughly 0.8 kg of oxygen per day, so life support has very little slack.",
+			"failure": "Oxygen falls and gas levels become dangerous. Humans cannot survive an unbreathable cabin.",
+			"real": "The ISS Environmental Control and Life Support System (ECLSS) recycles air and water for the crew.",
+			"reflection": "Why do you think recycling air matters more on a long mission than on a short one?",
+			"source": "NASA CubeSat 101",
+			"source_date": "2017",
+			"source_url": "https://www3.nasa.gov/sites/default/files/atoms/files/nasa_csli_cubesat_101_508.pdf",
+			"subject": "Life-support systems",
+			"title": "Oxygen Control",
+			"what": "Scrubs carbon dioxide out of the air and keeps a breathable oxygen level for the crew.",
+			"why": "Humans need a steady supply of oxygen and must remove the carbon dioxide they exhale, every minute of every day."
+		},
+		"piloting": {
+			"fact": "Getting to another planet is about timing and speed, not driving in a straight line.",
+			"failure": "Navigation errors waste fuel and can send the spacecraft to the wrong place.",
+			"real": "NASA's General Mission Analysis Tool (GMAT) is used to design and plan real spacecraft trajectories.",
+			"reflection": "Why is reaching a planet about timing and speed rather than steering like a car?",
+			"source": "NASA - General Mission Analysis Tool (GMAT)",
+			"source_date": "NASA software catalog",
+			"source_url": "https://software.nasa.gov/software/GSC-19468-1",
+			"subject": "Orbital mechanics",
+			"title": "Cockpit / Navigation",
+			"what": "Steers the spacecraft and computes its trajectory: where it is, how fast it goes and where it will be next.",
+			"why": "Spacecraft travel along curved trajectories, so small changes in speed and direction matter a great deal."
+		},
+		"repair": {
+			"fact": "Reliability engineers plan for failures before launch, so one fault does not end the mission.",
+			"failure": "Broken systems stay broken, and small faults can grow into big problems.",
+			"real": "The ISS carries spare orbital replacement units that astronauts can swap out during spacewalks.",
+			"reflection": "What would you pack as a spare part if you could only choose one?",
+			"source": "NASA CubeSat 101",
+			"source_date": "2017",
+			"source_url": "https://www3.nasa.gov/sites/default/files/atoms/files/nasa_csli_cubesat_101_508.pdf",
+			"subject": "Reliability engineering",
+			"title": "Repair Bay",
+			"what": "Uses spare parts and crew time to fix damaged systems.",
+			"why": "A single failed part can endanger a mission, so spacecraft carry spare parts and redundancy."
+		},
+		"sensors": {
+			"fact": "A spectrometer splits light into colours to identify what a material is made of.",
+			"failure": "The mission collects little or no scientific data, so there is nothing for scientists to analyse.",
+			"real": "Mars orbiters and rovers carry instrument suites to measure atmospheres, surfaces and radiation.",
+			"reflection": "If you could carry only two instruments to Mars, which would you pick and what would you learn?",
+			"source": "NASA - Design and Develop Science Missions",
+			"source_date": "2025",
+			"source_url": "https://www.nasa.gov/wp-content/uploads/2025/04/250323-design-and-develop-science-mission.pdf",
+			"subject": "Scientific instruments",
+			"title": "Science Laboratory",
+			"what": "Runs the ship's instruments: cameras, thermal sensors, spectrometers, pressure sensors and magnetometers.",
+			"why": "Instruments let scientists study a distant world's temperature, atmosphere, surface and magnetic field without going there."
+		},
+		"shields": {
+			"fact": "Engineers aim to reduce crew radiation exposure over a whole mission, not to block every particle.",
+			"failure": "Instruments and electronics can be damaged by radiation and the crew can be exposed to harmful doses.",
+			"real": "Current spacecraft cannot use energy deflector shields; they use materials, sheltered zones and careful mission planning instead.",
+			"reflection": "Which would you protect first: the crew, the instruments, or the engines? Why?",
+			"source": "NASA - Design and Develop Science Missions",
+			"source_date": "2025",
+			"source_url": "https://www.nasa.gov/wp-content/uploads/2025/04/250323-design-and-develop-science-mission.pdf",
+			"subject": "Radiation and spacecraft protection",
+			"title": "Shield Generator",
+			"what": "Represents the spacecraft's protective shell and radiation shielding that keep equipment and crew safe.",
+			"why": "Outside Earth's atmosphere, spacecraft face solar radiation, cosmic rays, extreme temperatures and micrometeoroids."
+		},
+		"weapons": {
+			"fact": "The space station's robotic arm Canadarm2 has caught visiting cargo spacecraft that were flying at thousands of kilometers an hour.",
+			"failure": "Without a working arm or beam, a crew has to find another way to move and catch cargo.",
+			"real": "Real missions use robotic arms such as Canadarm2 and the Mars rover arms to grab, scoop and move things.",
+			"reflection": "What tool would you build to pick up a floating toolbox in space?",
+			"source": "NASA - Design and Develop Science Missions",
+			"source_date": "2025",
+			"source_url": "https://www.nasa.gov/wp-content/uploads/2025/04/250323-design-and-develop-science-mission.pdf",
+			"subject": "Reaching and grabbing things in space",
+			"title": "Tractor Beam",
+			"what": "In this game, the Tractor Beam grabs floating cargo and gives you a hint at Puzzle Gates. Real spacecraft use robot arms and magnets, like the Canadarm2 on the space station.",
+			"why": "Spacecraft often need to grab, move or hold things safely. Robot arms and beams do the heavy lifting so astronauts do not have to."
+		}
+	},
+	"scan_targets": {
+		"anomaly": {
+			"facts": [
+				"Outside a magnetic field, charged particles from the Sun arrive far more easily.",
+				"Micrometeoroids can hit a spacecraft at several kilometres per second."
+			],
+			"interpretation": "Away from planetary protection the environment is harsher: more radiation and dust, and no magnetic field to deflect particles.",
+			"limits": "This scenario is fictional gameplay; the concepts are real.",
+			"observations": [
+				{
+					"instrument": "radiation",
+					"kind": "fictional",
+					"note": "Game value for a solar particle event near the ship.",
+					"quality": "fair",
+					"unit": "mSv/day",
+					"value": "1.6"
+				},
+				{
+					"instrument": "magnet",
+					"kind": "fictional",
+					"note": "Game value for the local field far from any planet.",
+					"quality": "fair",
+					"unit": "uT",
+					"value": "0.02"
+				},
+				{
+					"instrument": "spectro",
+					"kind": "simplified",
+					"note": "Solar wind is mostly hydrogen and helium.",
+					"quality": "fair",
+					"unit": "composition",
+					"value": "H, He, trace metals"
+				}
+			],
+			"question": "Why would a mission designer plan extra shielding for a long trip through deep space?",
+			"source": "NASA - Design and Develop Science Missions",
+			"source_date": "2025",
+			"source_url": "https://www.nasa.gov/wp-content/uploads/2025/04/250323-design-and-develop-science-mission.pdf",
+			"title": "DEEP SPACE - ENVIRONMENTAL SURVEY"
+		},
+		"planet_earth": {
+			"facts": [
+				"Earth's magnetic field deflects many charged particles from the Sun.",
+				"A pressure of 101325 Pa is one standard atmosphere."
+			],
+			"interpretation": "Earth's thick atmosphere and strong magnetic field shield the surface. Comparing other worlds to Earth helps scientists understand them.",
+			"limits": "Simplified representative values for comparison.",
+			"observations": [
+				{
+					"instrument": "thermal",
+					"kind": "simplified",
+					"note": "Average surface temperature.",
+					"quality": "good",
+					"unit": "C",
+					"value": "15"
+				},
+				{
+					"instrument": "pressure",
+					"kind": "real",
+					"note": "Standard sea-level pressure.",
+					"quality": "good",
+					"unit": "Pa",
+					"value": "101325"
+				},
+				{
+					"instrument": "magnet",
+					"kind": "simplified",
+					"note": "Earth's magnetic field ranges roughly 25-65 uT.",
+					"quality": "good",
+					"unit": "uT",
+					"value": "50"
+				}
+			],
+			"question": "Why does a thick atmosphere and a magnetic field make a planet more friendly to life?",
+			"source": "NASA CubeSat 101",
+			"source_date": "2017",
+			"source_url": "https://www3.nasa.gov/sites/default/files/atoms/files/nasa_csli_cubesat_101_508.pdf",
+			"title": "EARTH - REFERENCE MEASUREMENT"
+		},
+		"planet_mars": {
+			"facts": [
+				"Mars is red because its soil contains iron oxide (rust).",
+				"Its atmosphere is roughly 95% carbon dioxide."
+			],
+			"interpretation": "Mars has a very thin atmosphere and its surface is extremely cold, so any spacecraft working there needs strong thermal protection.",
+			"limits": "Simplified rounded averages; real values change with location and season.",
+			"observations": [
+				{
+					"instrument": "thermal",
+					"kind": "simplified",
+					"note": "Average surface temperature (rounded).",
+					"quality": "good",
+					"unit": "C",
+					"value": "-63"
+				},
+				{
+					"instrument": "pressure",
+					"kind": "simplified",
+					"note": "Surface pressure, about 0.6% of Earth's.",
+					"quality": "good",
+					"unit": "Pa",
+					"value": "600"
+				},
+				{
+					"instrument": "magnet",
+					"kind": "simplified",
+					"note": "No strong global magnetic field; only weak crustal pockets.",
+					"quality": "fair",
+					"unit": "uT",
+					"value": "0"
+				},
+				{
+					"instrument": "radiation",
+					"kind": "simplified",
+					"note": "Measured by the Curiosity rover's radiation detector.",
+					"quality": "fair",
+					"unit": "mSv/day",
+					"value": "0.7"
+				}
+			],
+			"question": "Why might a spacecraft need special thermal protection when operating on Mars?",
+			"source": "NASA - Design and Develop Science Missions",
+			"source_date": "2025",
+			"source_url": "https://www.nasa.gov/wp-content/uploads/2025/04/250323-design-and-develop-science-mission.pdf",
+			"title": "MARS - SURFACE OBSERVATION"
+		},
+		"planet_moon": {
+			"facts": [
+				"Sunlight takes about 1.3 seconds to reach the Moon.",
+				"Apollo samples showed the Moon is made of rock similar to Earth's."
+			],
+			"interpretation": "Without an atmosphere to trap heat, the Moon swings from very hot days to very cold nights. There is no air to breathe.",
+			"limits": "Simplified extremes; real surface temperatures vary with latitude.",
+			"observations": [
+				{
+					"instrument": "thermal",
+					"kind": "simplified",
+					"note": "Daytime surface temperature.",
+					"quality": "good",
+					"unit": "C",
+					"value": "120"
+				},
+				{
+					"instrument": "thermal",
+					"kind": "simplified",
+					"note": "Night-time surface temperature.",
+					"quality": "good",
+					"unit": "C",
+					"value": "-130"
+				},
+				{
+					"instrument": "pressure",
+					"kind": "real",
+					"note": "The Moon has essentially no atmosphere.",
+					"quality": "good",
+					"unit": "Pa",
+					"value": "0"
+				},
+				{
+					"instrument": "magnet",
+					"kind": "simplified",
+					"note": "No global magnetic field.",
+					"quality": "good",
+					"unit": "uT",
+					"value": "0"
+				}
+			],
+			"question": "Why is the temperature difference between lunar day and night so extreme?",
+			"source": "NASA - Design and Develop Science Missions",
+			"source_date": "2025",
+			"source_url": "https://www.nasa.gov/wp-content/uploads/2025/04/250323-design-and-develop-science-mission.pdf",
+			"title": "MOON - SURFACE OBSERVATION"
+		}
+	},
+	"segments": [
+		{
+			"blurb": "Prepare the spacecraft and place it on its way.",
+			"icon": "edu_launch",
+			"id": "launch",
+			"name": "Launch",
+			"teaches": [
+				"Launch vehicles",
+				"Launch preparation",
+				"Mission objectives",
+				"Readiness checklists"
+			]
+		},
+		{
+			"blurb": "Fly, navigate, power systems and observe with instruments.",
+			"icon": "edu_space",
+			"id": "space",
+			"name": "Space",
+			"teaches": [
+				"Spacecraft systems",
+				"Scientific instruments",
+				"Navigation & propulsion",
+				"Power & life support"
+			]
+		},
+		{
+			"blurb": "Mission control talks to the spacecraft by radio.",
+			"icon": "edu_ground",
+			"id": "ground",
+			"name": "Ground",
+			"teaches": [
+				"Ground stations",
+				"Mission control",
+				"Telemetry",
+				"Signal delay"
+			]
+		},
+		{
+			"blurb": "Scientists analyse the data and answer the question.",
+			"icon": "edu_user",
+			"id": "user",
+			"name": "User",
+			"teaches": [
+				"Scientific data",
+				"Data analysis",
+				"Findings",
+				"Interpretation"
+			]
+		}
+	],
+	"sources": [
+		{
+			"date": "2025",
+			"title": "NASA - Design and Develop Science Missions",
+			"url": "https://www.nasa.gov/wp-content/uploads/2025/04/250323-design-and-develop-science-mission.pdf"
+		},
+		{
+			"date": "NASA software catalog",
+			"title": "NASA - General Mission Analysis Tool (GMAT)",
+			"url": "https://software.nasa.gov/software/GSC-19468-1"
+		},
+		{
+			"date": "JPL dataverse",
+			"title": "JPL - Concept Maturity Levels",
+			"url": "https://dataverse.jpl.nasa.gov/dataset.xhtml?persistentId=hdl:2014/44299"
+		},
+		{
+			"date": "NASA GSFC",
+			"title": "NASA - Mission Design Lab",
+			"url": "https://etd.gsfc.nasa.gov/capabilities/integrated-design-center/mission-design-lab/"
+		},
+		{
+			"date": "NASA open source",
+			"title": "NASA Mission Viz",
+			"url": "https://nasa.github.io/mission-viz/"
+		},
+		{
+			"date": "NASA",
+			"title": "NASA Webb Telescope - Build It Yourself game",
+			"url": "https://science.nasa.gov/mission/webb/game-build-it-yourself/"
+		},
+		{
+			"date": "2017",
+			"title": "NASA CubeSat 101",
+			"url": "https://www3.nasa.gov/sites/default/files/atoms/files/nasa_csli_cubesat_101_508.pdf"
+		},
+		{
+			"date": "2023",
+			"title": "NASA Space Apps - Visualize a Space Mission",
+			"url": "https://www.spaceappschallenge.org/2023/challenges/visualize-a-space-mission-using-virtual-reality/"
+		},
+		{
+			"date": "CSA",
+			"title": "Canadian Space Agency - Digital Games and Activities",
+			"url": "https://www.asc-csa.gc.ca/eng/youth-educators/digital-games-and-activities.asp"
+		}
+	],
+	"tips": {
+		"combat_safety": {
+			"category": "engineering",
+			"text": "Real space missions stay safe by planning ahead, not by fighting. Engineers protect spacecraft from dust, heat and radiation so the science can go on."
+		},
+		"communications": {
+			"category": "communications",
+			"text": "Ground stations receive information from spacecraft and send commands."
+		},
+		"data": {
+			"category": "data_analysis",
+			"text": "Data is not the same as knowledge. Scientists analyse measurements to understand what they mean."
+		},
+		"engineering": {
+			"category": "engineering",
+			"text": "Adding equipment can improve a mission, but it can also increase mass and power requirements."
+		},
+		"exploration": {
+			"category": "instruments",
+			"text": "Instruments let scientists investigate distant environments without needing to visit them in person."
+		},
+		"failure": {
+			"category": "operations",
+			"text": "An unexpected result can still teach scientists something if the data is carefully examined."
+		},
+		"launch": {
+			"category": "operations",
+			"text": "A successful launch places a spacecraft on its way. The spacecraft must still complete its mission objectives."
+		},
+		"life_support": {
+			"category": "engineering",
+			"text": "Human spacecraft must maintain a safe environment for their crew."
+		},
+		"mission_planning": {
+			"category": "mission_design",
+			"text": "Every mission starts with a question. Scientists define what they want to discover before choosing the spacecraft and instruments."
+		},
+		"mission_safety": {
+			"category": "engineering",
+			"text": "Radiation, extreme temperatures and micrometeoroids can affect spacecraft."
+		},
+		"navigation": {
+			"category": "navigation",
+			"text": "Spacecraft travel along trajectories. Position, velocity and direction all matter."
+		},
+		"power": {
+			"category": "engineering",
+			"text": "Scientific instruments, computers, communications and other spacecraft systems need electrical power."
+		},
+		"reliability": {
+			"category": "engineering",
+			"text": "Backup systems can help a spacecraft keep operating if one component fails."
+		},
+		"signal_delay": {
+			"category": "communications",
+			"text": "Radio signals travel at the speed of light. Communication with distant spacecraft is not instantaneous."
+		},
+		"uncertainty": {
+			"category": "data_analysis",
+			"text": "Measurements have limits. Scientists consider accuracy, uncertainty and instrument capability."
+		}
+	}
+}
