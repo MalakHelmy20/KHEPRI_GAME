@@ -1,4 +1,4 @@
-# MOON RUN: GALAXY EXPLORERS - Egypt x NASA (Kids Edition)
+# KHEPRI: GALAXY EXPLORERS - Egypt x NASA (Kids Edition)
 
 Open this folder in **Godot 4.7** (tested on 4.7 stable, standard build, no C#) and press **F5**.
 No plugins needed.
@@ -31,12 +31,4 @@ talk to Egyptian legends on the radio, solve Puzzle Gates and bring your science
 - Real instruments, scan data with units and quality, a knowledge library, mission timeline and signal delay.
 - All teaching text is in `data/education.json` and `scripts/game_data.gd` (QUIZ) - add more freely.
 
-## Keys
-Esc = back, M = map, B = bio bay, C = scan.
 
-## Tests (optional, headless)
-```
-godot --headless --path . --script res://tests/sim.gd
-godot --headless --path . --script res://tests/smoke.gd -- 0 junior     # mission index, band
-godot --headless --path . --script res://tests/smoke.gd -- 0 tutorial
-```
